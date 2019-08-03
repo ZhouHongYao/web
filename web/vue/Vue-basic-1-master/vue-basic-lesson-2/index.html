@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VueJS Tutorials</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <!-- <h1>Hey, {[ name ]}</h1> -->
+            <h1>Hey, {{ name }}</h1>
+            <h2>{{ greet(' func-test ') }}</h2>
+            <a v-bind:href="website" >web开发</a>
+            <input type="text" v-bind:value='job'> 
+            <p v-html="websiteTag"></p>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>
