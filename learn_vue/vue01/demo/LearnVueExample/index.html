@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- MVVM模式中的V视图 -->
+    <div id="app">
+        {{ msg }}
+    </div>
+
+    <script>
+        <!-- Vue实例, 会控制这个 id为app元素中的所有内容 -->
+        // Vue的实例就是vm控制器
+        var vm = new Vue({
+            // 控制的区域
+            el: '#app',
+            // 代码数据, MVVM中的M
+            data: {
+                msg: 'Hello, Python 测试大佬们!'
+            }
+        })
+    </script>
+</body>
+</html>
