@@ -5,6 +5,8 @@
     <!-- 在父组件中给子组件传值 -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
 <!--    <greeting msg="greeting component"/>-->
+    <greeting id="1"/>
+    <greeting id="2"/>
     <greeting/>
   </div>
 </template>
