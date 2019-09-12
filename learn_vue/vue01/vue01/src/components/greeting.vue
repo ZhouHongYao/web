@@ -1,4 +1,5 @@
 <template>
+    <!-- 插值表达式 -->
     <h3>{{msg}}</h3>
 </template>
 
