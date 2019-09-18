@@ -4,8 +4,11 @@ import Vue from 'vue'
 //导入ElementUI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
 Vue.use(ElementUI);
+
+// //导入vue-router
+// import router from 'Vue-router';
+// Vue.use(router);
 
 // 导入App.vue根组件
 import App from './App.vue'
