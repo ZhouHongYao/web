@@ -38,7 +38,8 @@
                 </template>
             </el-table-column>
         </el-table>
-        <messageBox class="mb" :tab="tab" @cb-cx="CB_CX"/>
+        <messageBox class="mb" :tab="tab" :msg="msg" @cb-cx="CB_CX"/>
+        <messageBox class="mb" :tab="tab2" :msg="msg2" @cb-cx="CB_CX2"/>
     </div>
 </template>
 
@@ -54,7 +55,10 @@
                     {date: '2016-05-01', name: '王小虎', address: '上海市普陀区金沙江路 1519 弄'},
                     {date: '2016-05-03', name: '王小虎', address: '上海市普陀区金沙江路 1516 弄'}
                 ],
-                tab:false
+                tab:false,
+                tab2:false,
+                msg:'修改项目信息',
+                msg2:'删除项目信息',
             }
         },
         components:{
@@ -71,13 +75,17 @@
             handleDelete(index, row) {
                 // eslint-disable-next-line no-console
                 console.log(index, row);
-                alert("删除项目信息");
+                this.tab2 = true;
+                // alert("删除项目信息");
             },
             CB_CX(val){
                 // eslint-disable-next-line no-console
-                console.log(val);
+                // console.log(val);
                 this.tab = val;
             },
+            CB_CX2(val){
+                this.tab2 = val;
+            }
         }
     }
 </script>

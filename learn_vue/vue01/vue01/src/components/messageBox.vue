@@ -5,14 +5,17 @@
 <script>
     export default {
         name: "messageBox",
-        props: ['tab'],
+        props: ['tab', 'msg'],
         watch: {
             tab: function (val) {
                 // eslint-disable-next-line no-console
-                console.log(val);
+                // console.log(val);
                 if (val) {
-                    this.open();
+                    this.open(this.msg);
                 }
+            },
+            msg: function (msg) {
+                this.msg = msg
             }
         },
         methods: {
@@ -25,16 +28,18 @@
             //     });
             //     this.$emit('cb-cx', 44)
             // },
-            open() {
-                this.$alert('这是一段内容', '标题名称', {
+            open(msg) {
+                this.$emit('cb-cx', false);
+                this.$alert(msg, '通知', {
                     confirmButtonText: '确定',
-                    callback: action => {
-                        this.$message({
-                            type: 'info',
-                            message: `action: ${ action }`
-                        });
-                        this.$emit('cb-cx', false);
-                    }
+                    // eslint-disable-next-line no-unused-vars
+                    // callback: action => {
+                        // this.$message({
+                        //     type: 'info',
+                        //     message: `action: ${ action }`
+                        // });
+                        // this.$emit('cb-cx', false);
+                    // }
                 });
             }
         }
