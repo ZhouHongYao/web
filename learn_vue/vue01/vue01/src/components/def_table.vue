@@ -38,10 +38,12 @@
                 </template>
             </el-table-column>
         </el-table>
+        <messageBox class="mb" :tab="tab" @cb-cx="CB_CX"/>
     </div>
 </template>
 
 <script>
+    import messageBox from "./messageBox";
     export default {
         name: "def_table.vue",
         data() {
@@ -51,21 +53,31 @@
                     {date: '2016-05-04', name: '王小虎', address: '上海市普陀区金沙江路 1517 弄'},
                     {date: '2016-05-01', name: '王小虎', address: '上海市普陀区金沙江路 1519 弄'},
                     {date: '2016-05-03', name: '王小虎', address: '上海市普陀区金沙江路 1516 弄'}
-                ]
+                ],
+                tab:false
             }
+        },
+        components:{
+            messageBox,
         },
         methods: {
             handleEdit(index, row) {
                 // eslint-disable-next-line no-console
                 console.log(index, row);
-                alert("修改项目信息");
+                this.tab=true;
+                // alert("修改项目信息");
                 // console.log(row.date);
             },
             handleDelete(index, row) {
                 // eslint-disable-next-line no-console
                 console.log(index, row);
                 alert("删除项目信息");
-            }
+            },
+            CB_CX(val){
+                // eslint-disable-next-line no-console
+                console.log(val);
+                this.tab = val;
+            },
         }
     }
 </script>
@@ -73,5 +85,8 @@
 <style scoped>
     .el_table {
         margin: 50px 30%;
+    }
+    .mb {
+        display: none;
     }
 </style>

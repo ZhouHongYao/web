@@ -12,6 +12,7 @@
         <projects></projects>
         <projectsNew></projectsNew>
         <def_table></def_table>
+        <messageBox></messageBox>
     </div>
 </template>
 
@@ -22,6 +23,7 @@
     import projects from "./components/projects";
     import projectsNew from "./components/projectsNew";
     import def_table from "./components/def_table";
+    import messageBox from "./components/messageBox";
 
     export default {
         // 定义组件名称
@@ -32,6 +34,7 @@
             projects,
             projectsNew,
             def_table,
+            messageBox
         },
         data(){
             return{
