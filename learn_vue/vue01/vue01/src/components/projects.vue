@@ -1,4 +1,5 @@
 <template>
+    <div>
     <table class="tab">
         <tr>
             <th  v-for="(ph, key) in project_headers" :key="key">{{ph}}</th>
@@ -9,6 +10,9 @@
             <td>{{project.app_type}}</td>
         </tr>
     </table>
+    <h2>这是全局组件greeting:</h2>
+        <greeting msg="这是全局组件greeting的msg"></greeting>
+    </div>
 </template>
 
 <script>

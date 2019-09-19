@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
+    <h1>hello world!</h1>
     <h1>{{ msg }}</h1>
+    <h2>{{message}}</h2>
+    <h3>{{this.$route.query.age}}</h3>
 <!--    <p>-->
 <!--      For a guide and recipes on how to configure / customize this project,<br>-->
 <!--      check out the-->
@@ -35,7 +38,18 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  data(){
+    // eslint-disable-next-line no-console
+    console.log(this.$router);
+    // eslint-disable-next-line no-console
+    console.log(this.$route);
+    return{
+      message: this.$route.params.message,
+    }
   }
+
 }
 </script>
 

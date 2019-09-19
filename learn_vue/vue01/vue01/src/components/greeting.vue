@@ -18,12 +18,12 @@
     export default {
         name: "greeting",
         props: {
-            // msg: String,
+            msg: String,
             // title2: String
         },
         data(){
             return{
-                msg: "插值表达式演示",
+                // msg: "插值表达式演示",
                 title: '数据绑定',
                 flag: true,
                 age: 20,
