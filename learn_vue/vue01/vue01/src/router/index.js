@@ -19,17 +19,24 @@ import def_table from "../components/def_table";
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/greeting', component: greeting, name: 'greeting' },
-        { path: '/Login', component: Login, name: 'Login' },
-        { path: '/HelloWorld/:message', component: HelloWorld, name: 'HelloWorld' },
-        { path: '/messageBox', component: messageBox, name: 'messageBox' },
-        { path: '/projects', component: projects, name: 'projects' },
-        { path: '/projectsNew', component: projectsNew , name: 'projectsNew' },
-        { path: '/def_table', component: def_table, name: 'def_table' }
+        {
+            path: '/greeting', component: greeting, name: 'greeting',
+            children: [
+                // {path: '', component: projectsNew},
+                // {path: '/a', component: def_table},
+                {path: 'pn', component: projectsNew},
+            ]
+        },
+        {path: '/Login', component: Login, name: 'Login'},
+        {path: '/HelloWorld/:age', component: HelloWorld, name: 'HelloWorld'},
+        {path: '/messageBox', component: messageBox, name: 'messageBox'},
+        {path: '/projects', component: projects, name: 'projects'},
+        {path: '/projectsNew', component: projectsNew, name: 'projectsNew'},
+        {path: '/def_table', component: def_table, name: 'def_table'}
     ]
 });
 //组件中可以通过this.$router.query来获取查询字符串参数（？后的参数）
 //组件中可以通过this.$router.params来获取查询字符串参数（路径参数/）
 
 //4.导出路由
-export  default  router;
+export default router;

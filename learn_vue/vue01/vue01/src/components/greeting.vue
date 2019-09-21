@@ -11,6 +11,16 @@
         <p v-else-if="age<18">age &lt; 18</p>
         <p @click="age=age+1">@click点击，age加1，age：{{age}}</p>
         <p v-on:click="deage">v-on:click，增加事件监听，age减1，age：{{age}}</p>
+        <h2>下面是greeting的子路由组件projectsNew：路由后面加/pn</h2>
+        <router-view></router-view>
+        <slot></slot>
+        <slot name="part1"></slot>
+        <slot name="part2"></slot>
+        <slot name="part3"></slot>
+<!--        插槽作用域-->
+        <slot name="part4" :username="user_name"></slot>
+        <slot name="part5" :username="user_name"></slot>
+        <slot name="part6" :username="user_name"></slot>
     </div>
 </template>
 
@@ -19,14 +29,15 @@
         name: "greeting",
         props: {
             msg: String,
-            // title2: String
         },
+
         data(){
             return{
                 // msg: "插值表达式演示",
                 title: '数据绑定',
                 flag: true,
                 age: 20,
+                user_name:"part的username"
             }
         },
         methods:{
