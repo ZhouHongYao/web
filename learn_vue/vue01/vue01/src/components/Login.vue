@@ -37,7 +37,7 @@
                 <p>part3</p>
             </template>
 <!--            vue2.6前-->
-<!--            <p slot="part4" slot-scope="scope">part4:{{scope.username}}</p>-->
+<!--            <p slot="part4" slot-scope="scope">part4:{{scope.user_name}}</p>-->
             <template slot="part4" slot-scope="scope">
                 part4:{{scope.user_name}}
             </template>
