@@ -18,9 +18,9 @@
         <slot name="part2"></slot>
         <slot name="part3"></slot>
 <!--        插槽作用域-->
-        <slot name="part4" :username="user_name"></slot>
-        <slot name="part5" :username="user_name"></slot>
-        <slot name="part6" :username="user_name"></slot>
+        <slot name="part4" :user_name="user_name"></slot>
+        <slot name="part5" :user_name="user_name"></slot>
+        <slot name="part6" :user_name="user_name"></slot>
     </div>
 </template>
 
