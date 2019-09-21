@@ -8,12 +8,17 @@
         <!--        </form>-->
         <!--        <p>输入的账号：{{username}}</p>-->
         <!--        <p>输入的密码：{{password}}</p>-->
+        <h3>登录框</h3>
         <el-form :model="ruleForm" status-icon ref="ruleForm" label-width="100px" class="demo-ruleForm">
             <el-form-item label="账号">
-                <el-input type="text" v-model="ruleForm.username" auto-complete="off"></el-input>
+                <el-input type="text" v-model="ruleForm.username" auto-complete="off">
+                    <i class="el-icon-user-solid" slot="prefix"></i>
+                </el-input>
             </el-form-item>
             <el-form-item label="密码" label-position="top">
-                <el-input type="password" v-model="ruleForm.password" auto-complete="off"></el-input>
+                <el-input type="password" v-model="ruleForm.password" auto-complete="off">
+                    <i class="el-icon-user" slot="prefix"></i>
+                </el-input>
             </el-form-item>
 
             <el-form-item>
@@ -82,7 +87,8 @@
     }
 
     .demo-ruleForm {
-        margin: 20px auto;
+        margin: auto;
+        /*border: 1px solid rgba(230, 230, 230, 0.27);*/
     }
 
 </style>
