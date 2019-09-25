@@ -9,14 +9,14 @@
                 background-color="#545c64"
                 text-color="#fff"
                 active-text-color="#ffd04b">
-            <el-menu-item index="1"><a href="http://49.235.177.249:7080/" class="sy">首页</a></el-menu-item>
+            <el-menu-item index="1"><a href="/" class="sy">首页</a></el-menu-item>
             <el-submenu index="2">
                 <template slot="title">相关链接</template>
-                <el-menu-item index="2-1"><a href="http://49.235.177.249:7080/Login" class="sy item">登录</a></el-menu-item>
-                <el-menu-item index="2-2"><a href="http://49.235.177.249:7080/greeting" class="sy item">问候</a></el-menu-item>
+                <el-menu-item index="2-1"><a href="/Login" class="sy item">登录</a></el-menu-item>
+                <el-menu-item index="2-2"><a href="/greeting" class="sy item">问候</a></el-menu-item>
                 <el-submenu index="2-3">
-                    <template slot="title"><a href="http://49.235.177.249:7080/projects" class="sy item">项目</a></template>
-                    <el-menu-item index="2-3-1"><a href="http://49.235.177.249:7080/projectsNew" class="sy item">projectsNew</a></el-menu-item>
+                    <template slot="title"><a href="/projects" class="sy item">项目</a></template>
+                    <el-menu-item index="2-3-1"><a href="/projectsNew" class="sy item">projectsNew</a></el-menu-item>
                 </el-submenu>
             </el-submenu>
             <el-menu-item index="3" disabled>about</el-menu-item>
